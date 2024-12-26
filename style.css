@@ -62,7 +62,7 @@ body{
 }
 
 .recipe-card_prep-time .recipe-card_section-title{
-    color: var(--rose-800);
+    color: var(--rose-50);
     font-size: 1rem;
 }
 
