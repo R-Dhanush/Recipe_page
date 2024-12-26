@@ -1,0 +1,146 @@
+:root{
+    --white: hsl(0, 0%, 100%);
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--stone-100);
+    line-height: 1.6;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.recipe-card{
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 2rem;
+    max-width: 700px;
+    width: 100%;
+}
+
+.recipe-card_image{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.recipe-card_title{
+    font-family: 'Young Serif',sans-serif;
+    color: var(--stone-900);
+    margin-top: 1rem;
+}
+
+.recipe-card_content{
+    font-family: 'Outfit',sans-serif;
+    color: var(--stone-600);
+    font-size: 1rem;
+}
+
+.recipe-card_section{
+    padding: 2rem 0rem;
+}
+
+.recipe-card_prep-time{
+    background-color: var(--rose-50);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.recipe-card_prep-time .recipe-card_section-title{
+    color: var(--rose-800);
+    font-size: 1rem;
+}
+
+.recipe-card_prep-time .recipe-card_list ::marker{
+    color: var(--rose-800);
+}
+
+.recipe-card_list,.recipe-card_ordered-list{
+    padding: 0rem 1rem;
+}
+
+.recipe-card_section-title{
+    color: var(--brown-800);
+}
+
+.recipe-card_ingredients .recipe-card_list{
+    list-style: square;
+}
+
+.recipe-card_list ::marker{
+    color: var(--brown-800);
+}
+
+.recipe-card_list-item{
+    padding: 0.5rem 0rem;
+}
+
+.recipe-card_ordered-list ::marker{
+    color: var(--brown-800);
+}
+
+.recipe-card__table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.recipe-card__table-row:not(:last-child){
+    border-bottom: 1px solid var(--stone-150);
+}
+
+.recipe-card__table-data{
+    padding: 1rem;
+}
+
+.recipe-card__table-data strong{
+    color: var(--brown-800);
+}
+
+hr{
+    color: var(--stone-150);
+}
+
+@media (max-width: 768px){
+    body{
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    body{
+        padding: 0;
+        background-color: var(--white);
+    }
+
+    .recipe-card{
+        background-color: var(--white);
+        border-radius: 0;
+        padding: 0;
+    }
+    
+    .recipe-card_image{
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 0;
+    }
+
+    .recipe-card_content , .recipe-card_title{
+        margin: 2rem;
+    }
+}
